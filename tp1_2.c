@@ -2,6 +2,7 @@
 int cuadradoUno(int *n);
 void cuadradoDos(int *n);
 void invertir(int *prim,int *seg);
+void orden(int *a, int *b);
 int main (){
     int n,a,b;
     printf("ingrese un numero: ");
@@ -15,7 +16,7 @@ int main (){
     scanf("%d",&a);
     printf("\nvalor de b:");
     scanf("%d",&b);
-    invertir(&a,&b);//funcion invertir
+    orden(&a,&b);//funcion invertir
     printf("\nvalor de a= %d\nvalor de b: %d", a,b);
     return 0;
 }
@@ -31,4 +32,12 @@ void invertir(int *prim,int *seg){
     aux2=*seg;
     *prim=aux2;
     *seg=aux;
+}
+
+void orden(int *a, int *b){
+    if (*a > *b)
+    {
+        /* code */
+        invertir(a,b);
+    }
 }
